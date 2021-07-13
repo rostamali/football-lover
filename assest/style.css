@@ -1,0 +1,138 @@
+/* ======================================
+            Google Fonts
+========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================
+            Common and Setup style
+========================================*/
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* ======================================
+            Utilities
+========================================*/
+.btn{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    margin-top: 27px;
+    display: inline-block;
+}
+
+
+/* ======================================
+            Hero section style
+========================================*/
+
+.hero{
+    background: #2D25A0;
+    /* width: 1440px; */
+    height: 677px;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 140px 0px 156px;
+}
+.hero-title{
+    font-size: 64px;
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 80px;
+}
+.hero-thumbnail img{
+    width: 556.01px;
+    height: 438px;
+}
+
+/* ======================================
+        Best players section style
+========================================*/
+#best-player-section{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 70px;
+}
+.best-players{
+    display: grid;
+    grid-template-columns: repeat(3,330px);
+    grid-template-rows: repeat(4,474px);
+    grid-gap: 27px 30px;
+}
+.best-player{
+    padding: 15px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+.best-player-thumbnail img{
+    width: 300px;
+    height: 256px;
+}
+.best-player-name{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    color: #18191F;
+}
+.best-player-desc{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #6C6C6C;
+}
+
+
+/* ======================================
+        Best players section style
+========================================*/
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo img{
+    width: 483.87px;
+    height: 110px;
+}
+.footer-link{
+    margin: 20px 0;
+}
+.footer-social-link{
+    text-decoration: none;
+    height: 32px;
+    width: 32px;
+    margin: 0 14px;
+    background-color: #E7E7E8;
+
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+.footer-social-link i{
+    font-size: 17px;
+    color:#969BAB;
+}  
+.footer-copyright{
+    padding-bottom: 63px;
+}  
+.footer-copyright span{
+    color:#000;
+    font-size: 18px;
+    font-weight: 400;
+}
