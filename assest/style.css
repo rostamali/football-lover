@@ -20,6 +20,11 @@ body{
     font-family: 'Poppins', sans-serif;
     width: 1440px;
 }
+.ml{
+    margin-left: 10px;
+    border-left: 1px solid #d8d8d8;
+    padding-left: 10px;
+}
 /* ======================================
             Utilities
 ========================================*/
@@ -123,13 +128,35 @@ body{
     height: 438px;
 }
 
+
+/* media query */
+
+@media only screen and (max-width:425px){
+    body{
+        width: 100%;
+    }
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        padding: 112px 15px 61px 15px;
+    }
+    .hero-title{
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .hero-thumbnail img{
+        width: 330px;
+        height: 260px;
+        margin-top: 50px;
+    }
+}
+
 /* ======================================
         Best players section style
 ========================================*/
 #best-player-section{
     display: flex;
     justify-content: center;
-
     margin-top: 70px;
 }
 .best-players{
@@ -160,7 +187,17 @@ body{
     line-height: 26px;
     color: #6C6C6C;
 }
-
+@media only screen and (max-width:425px){
+    .best-players{
+        display: grid;
+        grid-template-columns: repeat(1,330px);
+        grid-gap: 24px 15px;
+    }
+    .best-player-thumbnail img{
+        width: 300px;
+        height: 256px;
+    }
+}
 /* ======================================
         Football Heighlight
 ========================================*/
@@ -196,7 +233,27 @@ body{
     width: 567px;
     height: 427px;
 }
-
+@media only screen and (max-width:425px){
+    #football-highlight-section{
+        padding: 60px 15px 0 15px;
+    }
+    .football-highlights{
+        flex-direction: column;
+    }
+    .football-highlight-title,
+    .football-news-title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .football-highlight-thumbnail{
+        margin-left: 0px;
+        margin-top: 29px;
+    }
+    .football-highlight-thumbnail img{
+        width: 328px;
+        height: 248px;
+    }
+}
 /* ======================================
         Football News
 ========================================*/
@@ -272,26 +329,54 @@ body{
     min-height: 192px;
 }
 
+/* media query */
+@media only screen and (max-width:425px){
+    #football-news-section{
+        padding: 0px 15px 0 15px;
+    }
+    .football-news{
+        flex-direction: column;
+    }
+    .football-news-left-box,
+    .football-news-right-box{
+        width: 100%;
+    }
+    .football-news-left-box{
+        margin: 0px;
+    }
+    .football-news-right-box{
+        margin: 0;
+        margin-top: 20px;
+    }
+    .football-news-right-box{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px 20px;
+    }
+}
 /* ======================================
         World best top player
 ========================================*/
 #top-player-world-section{
     width: 100%;
-    padding: 165px 156px 0 156px;
+    padding: 80px 156px 0 156px;
 }
 .top-player-wrapper{
     display: flex;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 100px;
 }
 .top-player-thumbnail{
     width: 30%;
 }
 .top-player-thumbnail img{
     width: 70%;
-    height: 100%;
+    margin-top: -70px;
+    margin-left: 15%;
 }
 .top-player-details{
     width: 70%;
+    padding: 20px;
 }
 .club-details{
     display: flex;
@@ -303,6 +388,73 @@ body{
 .club-thumbnail img{
     width: 32px;
     height: 32px;
+}
+
+.top-player-records{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px 20px;
+}
+.record-number-details {
+    display: flex;
+}
+.big-letter{
+    background: linear-gradient(#E02C6D,#0A0826);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 800;
+}
+.top-player-record{
+    box-shadow: 0 0.2rem 0.6rem 0 rgb(0 0 0 / 12%);
+    border-radius: 5px;
+    padding: 15px;
+}
+.top-player-record .fa-random{
+    color: #d8d8d8;
+    font-size: 14px;
+    padding: 4px;
+    border: 2px solid #d8d8d8;
+    border-radius: 50%;
+}
+.random-icon-text{
+    font-weight: 600;
+    color: #222;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.top-player-record h5 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* media query */
+@media only screen and (max-width:425px){
+    #top-player-world-section{
+        padding: 20px 15px 20px 15px;
+    }
+    .top-player-wrapper{
+        flex-direction: column;
+    }
+    .top-player-records{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px 20px;
+    }
+    .top-player-thumbnail{
+        width: 100%;
+    }
+    .top-player-thumbnail img{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .top-player-details{
+        width: 100%;
+    }
+    .top-player-info{
+        margin: 20px 0;
+    }
 }
 /* ======================================
         Footer section style
@@ -343,4 +495,14 @@ body{
     color:#000;
     font-size: 18px;
     font-weight: 400;
+}
+
+@media only screen and (max-width:425px){
+    #footer{
+        padding-top: 25px;
+    }
+    .footer-logo img{
+        width: 150px;
+        height: 53px;
+    }
 }
