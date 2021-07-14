@@ -297,17 +297,17 @@ body{
     #football-highlight-section{
         padding: 60px 15px 0 15px;
     }
-    
+    .football-highlights{
+        align-items: flex-start;
+    }
     .football-highlight-title{
         font-size: 30px;
         line-height: 40px;
     }
     
     .football-highlight-thumbnail img{
-        width: 100%;
-        height: 256px;
-        max-height: 240px;
-        min-height: 200px;
+        width: 328px;
+        height: 248px;
     }
 }
 /* ======================================
