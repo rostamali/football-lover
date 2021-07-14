@@ -252,8 +252,8 @@ body{
     .football-highlight-thumbnail img{
         width: 100%;
         height: 256px;
-        max-height: 220px;
-        min-height: 100px;
+        max-height: 240px;
+        min-height: 200px;
     }
 }
 /* ======================================
@@ -334,7 +334,7 @@ body{
 /* media query */
 @media only screen and (max-width:425px){
     #football-news-section{
-        padding: 0px 15px 0 15px;
+        padding: 60px 15px 0 15px;
     }
     .football-news{
         flex-direction: column;
@@ -449,7 +449,7 @@ body{
 /* media query */
 @media only screen and (max-width:425px){
     #top-player-world-section{
-        padding: 20px 15px 20px 15px;
+        padding: 60px 15px 20px 15px;
     }
     .top-player-wrapper{
         flex-direction: column;
@@ -515,7 +515,7 @@ body{
 
 @media only screen and (max-width:425px){
     #footer{
-        padding-top: 25px;
+        padding-top: 60px;
     }
     .footer-logo img{
         width: 150px;
