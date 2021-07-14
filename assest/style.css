@@ -202,13 +202,13 @@ body{
 }
 .football-news-left-box,
 .football-news-right-box{
-    width: 500%;
+    width: 50%;
 }
 .football-news-left-box{
-    margin-right: 33px;
+    margin-right: 10px;
 }
 .football-news-right-box{
-    margin-left: 33px;
+    margin-left: 10px;
 }
 .footbal-news-article{
     padding: 15px;
@@ -226,10 +226,10 @@ body{
     width: 100%;
 }
 .football-news-right-box .news-thumbnail{
-    height: 256px;
+    height: 192px;
 }
 .football-news-left-box .news-thumbnail{
-    height: 425px;
+    height: 310px;
 }
 .football-news-cat{
     font-size: 15px;
@@ -249,7 +249,8 @@ body{
 }
 .football-news-left-box .footbal-news-article .news-thumbnail img{
     width: 100%;
-    height: 425px;
+    max-height: 425px;
+    min-height: 310px;
 }
 
 .football-news-right-box{
@@ -259,7 +260,8 @@ body{
 }
 .football-news-right-box .footbal-news-article .news-thumbnail img{
     width: 100%;
-    height: 256px;
+    max-height: 256px;
+    min-height: 192px;
 }
 /* ======================================
         Footer section style
