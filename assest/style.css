@@ -20,10 +20,10 @@ body{
     font-family: 'Poppins', sans-serif;
     width: 1440px;
 }
-.ml{
-    margin-left: 10px;
-    border-left: 1px solid #d8d8d8;
-    padding-left: 10px;
+@media only screen and (max-width:768px){
+    body{
+        width: 100%;
+    }
 }
 /* ======================================
             Utilities
@@ -104,6 +104,11 @@ body{
     color: #000;
     margin-bottom: 20px
 }
+.ml{
+    margin-left: 10px;
+    border-left: 1px solid #d8d8d8;
+    padding-left: 10px;
+}
 /* ======================================
             Hero section style
 ========================================*/
@@ -129,8 +134,25 @@ body{
 }
 
 
-/* media query */
+/* media query for Tablet */
 
+@media only screen and (max-width:768px){
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        padding: 112px 15px 61px 15px;
+    }
+    .hero-title{
+        font-size: 46px;
+        line-height: 50px;
+    }
+    .hero-thumbnail img{
+        margin-top: 50px;
+        width: 430px;
+        height: 360px;
+    }
+}
+/* media query for Mobile device */
 @media only screen and (max-width:425px){
     body{
         width: 100%;
@@ -187,9 +209,18 @@ body{
     line-height: 26px;
     color: #6C6C6C;
 }
+
+/* media query */
+
+@media only screen and (max-width:768px){
+    .best-players{
+        grid-template-columns: repeat(2,330px);
+        grid-gap: 24px 15px;
+    }
+}
+
 @media only screen and (max-width:425px){
     .best-players{
-        display: grid;
         grid-template-columns: repeat(1,330px);
         grid-gap: 24px 15px;
     }
@@ -212,8 +243,7 @@ body{
 .football-highlight-info{
     margin-right: 33px;
 }
-.football-highlight-title,
-.football-news-title{
+.football-highlight-title{
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
@@ -233,22 +263,40 @@ body{
     width: 567px;
     height: 427px;
 }
-@media only screen and (max-width:425px){
+
+/* media query */
+
+@media only screen and (max-width:768px){
     #football-highlight-section{
-        padding: 60px 15px 0 15px;
+        padding: 60px 45px 20px 45px;
     }
     .football-highlights{
         flex-direction: column;
     }
-    .football-highlight-title,
-    .football-news-title{
-        font-size: 30px;
-        line-height: 40px;
+    .football-highlight-title{
+        font-size: 40px;
+        line-height: 50px;
     }
     .football-highlight-thumbnail{
         margin-left: 0px;
         margin-top: 29px;
     }
+    .football-highlight-thumbnail img{
+        width: 80%;
+        height: 380px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    #football-highlight-section{
+        padding: 60px 15px 0 15px;
+    }
+    
+    .football-highlight-title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
     .football-highlight-thumbnail img{
         width: 100%;
         height: 256px;
@@ -259,6 +307,7 @@ body{
 /* ======================================
         Football News
 ========================================*/
+/* common style */
 #football-news-section{
     width: 100%;
     padding: 165px 156px 0 156px;
@@ -271,16 +320,14 @@ body{
 .football-news-right-box{
     width: 50%;
 }
-.football-news-left-box{
-    margin-right: 10px;
-}
-.football-news-right-box{
-    margin-left: 10px;
-}
 .football-news-article{
     padding: 15px;
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
+}
+.news-thumbnail{
+    overflow: hidden;
+    width: 100%;
 }
 .news-thumbnail img{
     transition: transform 0.3s ease-in;
@@ -288,53 +335,68 @@ body{
 .football-news-article:hover .news-thumbnail img{
     transform:scale(1.3);
 }
-.news-thumbnail{
-    overflow: hidden;
-    width: 100%;
-}
-.football-news-right-box .news-thumbnail{
-    height: 192px;
-}
-.football-news-left-box .news-thumbnail{
-    height: 310px;
-}
 .football-news-cat{
     font-size: 15px;
     font-style: italic;
     color: #E02C6D;
     font-weight: 500;
 }
-.football-news-sm-title{
-    font-size: 20px;
-    font-weight: 600;
-    color:#0A0826;
-}
 .football-news-desc{
     font-style: 14px;
     font-weight: 400;
     color: #6C6C6C;
+}
+
+
+/* football news left box */
+
+.football-news-left-box{
+    margin-right: 10px;
+}
+.football-news-left-box .news-thumbnail{
+    height: 310px;
 }
 .football-news-left-box .football-news-article .news-thumbnail img{
     width: 100%;
     max-height: 425px;
     min-height: 310px;
 }
+.football-news-title{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #0A0826;
+}
+
+/* football news right box */
 
 .football-news-right-box{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 20px 20px;
+    margin-left: 10px;
+}
+.football-news-right-box .news-thumbnail{
+    height: 192px;
 }
 .football-news-right-box .football-news-article .news-thumbnail img{
     width: 100%;
     max-height: 256px;
     min-height: 192px;
 }
+.football-news-sm-title{
+    font-size: 20px;
+    font-weight: 600;
+    color:#0A0826;
+    line-height: 27px;
+}
+
 
 /* media query */
-@media only screen and (max-width:425px){
+
+@media only screen and (max-width:768px){
     #football-news-section{
-        padding: 60px 15px 0 15px;
+        padding: 60px 45px 20px 45px;
     }
     .football-news{
         flex-direction: column;
@@ -350,12 +412,22 @@ body{
         margin: 0;
         margin-top: 20px;
     }
+}
+@media only screen and (max-width:425px){
+    #football-news-section{
+        padding: 60px 15px 0 15px;
+    }
     .football-news-right-box{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 20px 20px;
     }
-
+    .football-news-title{
+        font-size: 20px;
+        font-weight: 600;
+        color:#0A0826;
+        line-height: 27px;
+    }
     .football-news-left-box .football-news-article .news-thumbnail img,
     .football-news-right-box .football-news-article .news-thumbnail img{
         width: 100%;
@@ -387,6 +459,7 @@ body{
     margin-top: -70px;
     margin-left: 15%;
 }
+
 .top-player-details{
     width: 70%;
     padding: 20px;
@@ -394,16 +467,17 @@ body{
 .top-player-info{
     margin-bottom: 10px;
 }
+
 .club-details{
     display: flex;
     align-items: center;
 }
-.club-name{
-    margin-left: 10px;
-}
 .club-thumbnail img{
     width: 32px;
     height: 32px;
+}
+.club-name{
+    margin-left: 10px;
 }
 
 .top-player-records{
@@ -411,21 +485,11 @@ body{
     grid-template-columns: repeat(2,1fr);
     grid-gap: 20px 20px;
 }
-.record-number-details {
-    display: flex;
-}
-.big-letter{
-    background: linear-gradient(#E02C6D,#0A0826);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #FFFFFF;
-    font-size: 20px;
-    font-weight: 800;
-}
 .top-player-record{
     box-shadow: 0 0.2rem 0.6rem 0 rgb(0 0 0 / 12%);
     border-radius: 5px;
     padding: 15px;
+    cursor: pointer;
 }
 .top-player-record .fa-random{
     color: #d8d8d8;
@@ -445,22 +509,53 @@ body{
     font-weight: 600;
     text-transform: uppercase;
 }
+.big-letter{
+    background: linear-gradient(#E02C6D,#0A0826);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 800;
+}
+.record-number-details {
+    display: flex;
+}
+
 
 /* media query */
-@media only screen and (max-width:425px){
+
+@media only screen and (max-width:768px){
     #top-player-world-section{
-        padding: 60px 15px 20px 15px;
+        padding: 60px 45px 20px 45px;
     }
     .top-player-wrapper{
         flex-direction: column;
+    }
+    .top-player-thumbnail{
+        width: 100%;
+    }
+    .top-player-thumbnail img {
+        width: 50%;
+        margin-top: -50px;
+        margin-left: 25%;
+    }
+    .top-player-records{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px 20px;
+    }
+    .top-player-details{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:425px){
+    #top-player-world-section{
+        padding: 60px 15px 20px 15px;
     }
     .top-player-records{
         grid-template-columns: repeat(1,1fr);
         grid-gap: 20px 20px;
     }
-    .top-player-thumbnail{
-        width: 100%;
-    }
+    
     .top-player-thumbnail img{
         width: 60%;
         margin-left: 20%;
@@ -512,6 +607,8 @@ body{
     font-size: 18px;
     font-weight: 400;
 }
+
+/* media query */
 
 @media only screen and (max-width:425px){
     #footer{
