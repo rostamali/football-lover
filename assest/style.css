@@ -18,6 +18,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
+    width: 1440px;
 }
 /* ======================================
             Utilities
