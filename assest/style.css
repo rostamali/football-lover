@@ -391,6 +391,9 @@ body{
     width: 70%;
     padding: 20px;
 }
+.top-player-info{
+    margin-bottom: 10px;
+}
 .club-details{
     display: flex;
     align-items: center;
