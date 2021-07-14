@@ -624,4 +624,7 @@ body{
         width: 300px;
         height: 63px;
     }
+    .footer-copyright{
+        padding-bottom: 187px;
+    }
 }
