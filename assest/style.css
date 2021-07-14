@@ -93,6 +93,12 @@ body{
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
 }
+.section-title{
+    font-style: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px
+}
 /* ======================================
             Hero section style
 ========================================*/
@@ -158,11 +164,13 @@ body{
 /* ======================================
         Football Heighlight
 ========================================*/
+#football-highlight-section{
+    padding: 165px 156px 0 156px;
+}
 .football-highlights{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 165px 156px 0 156px;
 }
 .football-highlight-info{
     margin-right: 33px;
@@ -194,11 +202,11 @@ body{
 ========================================*/
 #football-news-section{
     width: 100%;
+    padding: 165px 156px 0 156px;
 }
 .football-news{
     display: flex;
     justify-content: stretch;
-    padding: 165px 156px 0 156px;
 }
 .football-news-left-box,
 .football-news-right-box{
@@ -262,6 +270,39 @@ body{
     width: 100%;
     max-height: 256px;
     min-height: 192px;
+}
+
+/* ======================================
+        World best top player
+========================================*/
+#top-player-world-section{
+    width: 100%;
+    padding: 165px 156px 0 156px;
+}
+.top-player-wrapper{
+    display: flex;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+.top-player-thumbnail{
+    width: 30%;
+}
+.top-player-thumbnail img{
+    width: 70%;
+    height: 100%;
+}
+.top-player-details{
+    width: 70%;
+}
+.club-details{
+    display: flex;
+    align-items: center;
+}
+.club-name{
+    margin-left: 10px;
+}
+.club-thumbnail img{
+    width: 32px;
+    height: 32px;
 }
 /* ======================================
         Footer section style
