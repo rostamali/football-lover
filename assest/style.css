@@ -55,11 +55,15 @@ body{
 
     transition: width 0.3s ease-in;
 }
-.btn:hover{
+/* .btn:hover{
+    z-index: 3;
+    color: #E02C6D;
+} */
+#header:hover .btn{
     z-index: 3;
     color: #E02C6D;
 }
-.btn:hover::before{
+#header:hover .btn::before{
     width: 100%;
 }
 
@@ -112,7 +116,9 @@ body{
 /* ======================================
             Hero section style
 ========================================*/
-
+#header{
+    cursor: pointer;
+}
 .hero{
     background: #2D25A0;
     /* width: 1440px; */
